@@ -23,5 +23,7 @@ class NoteB{
     }
 }
 const data1 = new NoteB('fmz','20');
-data1.value.apply(data)
+data1.value.apply(data);
+data1.value();
+
 <------                          
