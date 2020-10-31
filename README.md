@@ -1,2 +1,16 @@
 # note
 工作学习笔记记录
+# es6 class
+基础用法 ----->
+class NoteA{
+    constructor(x,y){
+        this.x = x;
+        this.y = y;
+    }
+    value(){
+        return `${this.x}:${this.y}`
+    }
+}
+const data = new NoteA(1,2);
+console.log(data.value())
+<------                          
