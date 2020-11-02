@@ -1,4 +1,5 @@
-# note 我的技术栈 vue，js，jq，uni-app，小程序，element，es6(学习中),react(下一步计划)
+
+# note 我的技术栈 vue，js，jq，uni-app，小程序，element，es6(学习中),react(下一步计划)，git管理
 工作学习笔记记录
 # es6 class apply call 正在学习...
 基础用法 ----->
@@ -26,6 +27,94 @@ const data1 = new NoteB('fmz','20');
 data1.value.apply(data);
 data1.value();
 
+===
+<!-- var 可以重复声明
+    let 统一作用域不能重复声明 否则报错
+        作用域 全局/块级
+        不会与预解析
+ -->
+let or const or var 
+
+let letData={
+    统一作用域不能重复声明 否则报错,
+    作用域 全局/块级,
+     不会与预解析
+}
+const constData={
+    常量，
+    一旦赋值不可以修改，
+    必须赋值，
+    块级作用域，
+    不会预解析
+}
+
+===
+结构赋值
+objecy
+let obj={
+    a:1,
+    b:2
+}
+let {a,b,c} = obj;
+<!-- 赋值变量必须一样，如果接值没有则是undefined -->
+array
+let array=[1,12,34];
+let [x,x] = array;
+<!-- 下标一致 -->
+<!-- 面试题 快速交换值 -->
+let a= 0;
+let b= 0;
+[a,b]=[b,a];
+
+string
+let str = 'hdfjhsjfhs';
+
+=== 
+展开运算符
+array
+let arr = [1,2,3,4];
+let arr2 = ['a','b',...arr,'c'];
+<!-- 剩余参数 -->
+let [a,b,...c] = arr;
+
+object
+let obj1 ={a:1,b:2};
+let obj2 = {c:3,d:4,...obj1};
+
+赋值，简单深浅拷贝
+let obj2 = {...obj};
+obj2.a = 10;
+
+===
+set or map
+<!-- 构造函数，用来构建某一类的对象 对象的实列话 -->
+<!-- 参数可以是数组,进行自动去重 -->
+<!-- set 属性 
+    size(保留值的个数==length)
+    clear()清空返回undefined;
+    delete()删除某项,参数不是下标,参数是value(要删除的数值),返回值true/false,删除成功true
+    add(),添加,也会自动去重,如果存在不在显示
+    has(),查看值是否存在 返回true/false
+    -->
+let arr  = [1,2,3,4,1];
+let s = new Set(arr);
+arr = [...s];
+
+<!-- Map 参数不能是对象,没有迭代 -->
+<!-- Map属性
+    clear()清空所有值,=>undefined;
+    delete(key==数据的key值)删除某一项=>删除成功true/false,
+    get(key);获取某一项值=>key对应的value
+    has(key)是否包含某一项=>true/false
+    set(key,value)设置一个值 key== 数值的key值,value==数据的value值;
+    
+ -->
+let arr2 =[
+    [a,1],
+    [b,2]
+]
+let maps= new Map(arr2)
+<!--  -->
 
 <------                          
 
