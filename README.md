@@ -205,3 +205,60 @@ ios自带浏览器内核
 
 # object 对象扩展学习
 object 创建
+<!-- 对象初始化,或对象字面量 ,以构造函数形式来调用-->
+参数 {
+    name:value
+    ......
+}
+成对的名称(字符串)与值(任何值),其中名称通过冒号值分割
+value 
+任何值
+<!-- 在javascript中,几乎所有的对象都是object类型的实例,它们都会从object.protitype继承属性和方法 -->
+---
+Object 构造函数的方法
+Object.assing();
+<-- 通过复制一个或多个对象来创建一个新的对象
+     let obj = {name:1};
+     let data = Object.assign({},data);
+     alert(data);
+     <-- 一个新的对象 
+        参数 target 目标对象
+             sources 源对象
+             返回值目标对象,
+        扩展深浅拷贝
+        对象合并 若果有相同的属性会进行覆盖
+        合并对象,目标对象也会改变
+     -->
+
+ -->
+ # 待定....
+ Object.create();
+ <-- 
+    方法创建一个新对象,使用现有的对象来提供新创建的对象的__proto__
+  -->
+
+Object.defineProperties()
+<--
+    方法直接在一个对象上定义行的属性或修改现有属性并返还该对象;
+    Object.defineProperties(obj, props)
+    参数 
+    obj:在其上低音或修改属性的对象
+    props: # 不理解
+    var obj = {};
+Object.defineProperties(obj, {
+    'property1': {
+        value: true,
+        writable: true
+    },
+    'property2': {
+        value: 'Hello',
+        writable: false
+    }
+  
+});
+-->
+
+Object.defineProperty()
+<--
+    方法会直接在一个对象上定义一个新属性
+-->
