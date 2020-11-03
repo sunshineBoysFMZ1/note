@@ -116,6 +116,19 @@ let arr2 =[
 let maps= new Map(arr2);
 <!--  -->
 
+<!-- 
+    参数=>返回值
+    单个参数括号可以不要,两个以上,或没有参数加上括号,
+    扩展this  如果this不是被某个方法调用,而是自调用其this指向全全局windows
+    箭头函数没有arguments 可以使用... 扩展运算符,
+    this 箭头函数本身没有this,调用箭头函数this时,指向是其声明时,所在的作用域的this
+ -->
+箭头函数
+let fn = (...value)=>{
+    console.log(value)
+};
+fn(1,2,3,4)
+
 <------                          
 
 # 微信小程序项目
