@@ -122,6 +122,8 @@ let maps= new Map(arr2);
     扩展this  如果this不是被某个方法调用,而是自调用其this指向全全局windows
     箭头函数没有arguments 可以使用... 扩展运算符,
     this 箭头函数本身没有this,调用箭头函数this时,指向是其声明时,所在的作用域的this
+    函数 默认参数值
+    (x=1,y=0)
  -->
 箭头函数
 let fn = (...value)=>{
@@ -214,7 +216,11 @@ ios自带浏览器内核
 # H5上传文件，使用fromdata;
 选择完文件，input 会有文件缓存，上传成功后删除
 
-
+# 判断
+false                true     
+(100 == true ) == (1 == true); 返回 false
+100 == true 等于两个不同的类型进行判断
+1 == true true和false 和负数进行比较,会把true 隐式转换成1 false 隐式转换为0
 
 # object 对象扩展学习
 object 创建
@@ -275,3 +281,63 @@ Object.defineProperty()
 <--
     方法会直接在一个对象上定义一个新属性
 -->
+
+Object.entries()
+<-- 
+    返回值是一个数组
+    方法返回一个给对象自身可枚举属性的键值对数组,期排列与使用for...in 循环遍历改对象返回的顺序一直
+ -->
+ Object.freeze()
+ <--
+    返回值被冻结的对象
+    冻结某个对象,一个对象被冻结再也不能被修改,冻结一个对象不能向这个对象添加新的属性,不能删除已有属性
+    const obj = {
+        prop:1
+    };
+    Object.freeze(obj);
+    obj.prop = 2;
+    console.log(obj.prop == 1,obj.prop == 2);
+    冻结一个数组
+    const arr = [0];
+    Object.freeze(arr);
+    arr[0] = 1;
+    console.log(arr[0] == 1 , arr[0] == 2 );
+    被冻结的对象是不可变的,但冻结对象是常量的话 == 浅冻结
+    const obj = {
+        a:{}
+    };
+    Object.freeze(obj)
+    obj.a.value = 2;
+    console.log(obj.a.value+'还是可以赋值成功')
+ -->
+ Object.fromEntries();
+ <--
+     方法把键值对列表转换为一个对象。
+     const obj = new Map([
+         [a,1],
+         [b,2]
+     ]);
+     <-- 
+        obj = {a==>1,b==>2}
+      -->
+     Object.fromEntries(obj);
+     console.log(obj=={a:1,b:2})
+-->
+
+Object.is()
+<-- 
+     方法判断两个值是否为同一个值。
+     返回值boolean
+ -->
+
+Object.keys(obj);
+<-- 
+    方法会返回一个由一个给定对象的自身可枚举属性组成的数组，数组中属性名的排列顺序和正常循环遍历该对象时返回的顺序一致 。
+ -->
+ Object.values()
+<-- 
+     方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用for...in循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。
+ -->
+
+
+
