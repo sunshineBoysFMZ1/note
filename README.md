@@ -49,7 +49,7 @@ const constData={
 }
 
 ===
-结构赋值
+# 结构赋值
 objecy
 let obj={
     a:1,
@@ -70,14 +70,14 @@ string
 let str = 'hdfjhsjfhs';
 
 === 
-展开运算符
+# 展开运算符
 array
 let arr = [1,2,3,4];
 let arr2 = ['a','b',...arr,'c'];
 <!-- 剩余参数 -->
 let [a,b,...c] = arr;
 
-object
+ object
 let obj1 ={a:1,b:2};
 let obj2 = {c:3,d:4,...obj1};
 
@@ -86,10 +86,10 @@ let obj2 = {...obj};
 obj2.a = 10;
 
 ===
-set or map
-<!-- 构造函数，用来构建某一类的对象 对象的实列话 -->
-<!-- 参数可以是数组,进行自动去重 -->
-<!-- set 属性 
+# set or map
+<-- 构造函数，用来构建某一类的对象 对象的实列话 -->
+<-- 参数可以是数组,进行自动去重 -->
+<-- set 属性 
     size(保留值的个数==length)
     clear()清空返回undefined;
     delete()删除某项,参数不是下标,参数是value(要删除的数值),返回值true/false,删除成功true
@@ -100,8 +100,8 @@ let arr  = [1,2,3,4,1];
 let s = new Set(arr);
 arr = [...s];
 
-<!-- Map 参数不能是对象,没有迭代 -->
-<!-- Map属性
+<-- Map 参数不能是对象,没有迭代 -->
+<-- Map属性
     clear()清空所有值,=>undefined;
     delete(key==数据的key值)删除某一项=>删除成功true/false,
     get(key);获取某一项值=>key对应的value
@@ -116,7 +116,13 @@ let arr2 =[
 let maps= new Map(arr2);
 <!--  -->
 
-<!-- 
+
+# 箭头函数
+let fn = (...value)=>{
+    console.log(value)
+};
+fn(1,2,3,4)
+<-- 
     参数=>返回值
     单个参数括号可以不要,两个以上,或没有参数加上括号,
     扩展this  如果this不是被某个方法调用,而是自调用其this指向全全局windows
@@ -125,11 +131,33 @@ let maps= new Map(arr2);
     函数 默认参数值
     (x=1,y=0)
  -->
-箭头函数
-let fn = (...value)=>{
-    console.log(value)
-};
-fn(1,2,3,4)
+
+<!-- new本身是创造符 -->
+
+# Array
+<-- 
+    类数组 有下标,有length
+    Array.from() 把一个类数组转换成一个真正的数值,
+            扩展:
+            Array.form()自带map函数=>Array.from(arr,()=>{
+
+            },arr);
+            最后一个参数改变this指向,如果是箭头函数this指向默认全局,写成普通function可以
+    Array.of() 创建array,
+    Array.isArray() 检查是不是一个数组
+    arr.find((item,index)=>{ 
+        检索数组符合的的值,满足要求第一个元素的值=>返回值 具体值/undefined
+    });
+    arr.findIndex();
+    数组扁平化,二位数组转成一位数组;
+    arr.flat();扁平化一个多维数组;参数 提取的层数;  如果不确定数组有多少层使用Infinity
+    arr.flatMap((item,index)=>{
+        只能处理1层
+    })
+    arr.fill();往数组里面填充/替换,如果只填写一个参数全部替换为参数值
+    arr.includes()   检测数组是否包含参数 ,参数2从第几位检索
+ -->
+
 
 <------                          
 
