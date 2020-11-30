@@ -367,5 +367,22 @@ Object.keys(obj);
      方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用for...in循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。
  -->
 
+# css transform
+<-- 
+    属性 rotate() 旋转角度 默认中心位置顺时针
+    scale()放大缩小元素 若干只有一个值则宽高一起变化，两个值分别代表宽和高
+    translate(x,y)移动元素位置
+    skew(x,y)让元素倾斜
+    transform-origin 改变元素变形原点
+ -->
 
+# css 瀑布布局
+<-- 
+    column css 属性
+    父级添加
+    column-count: 4;
+    column-gap: 0;
+
+  img 图片高度 auto 
+ -->
 
